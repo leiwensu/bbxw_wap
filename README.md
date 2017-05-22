@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # wap
 
 > bbxw wap
@@ -23,4 +22,4 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 =======
 # bbxw_wap
 哔哔新闻wap版
->>>>>>> origin/master
+
