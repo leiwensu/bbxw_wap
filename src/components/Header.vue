@@ -20,14 +20,20 @@
     @rem:100rem;
     @base-color:#fa9144;
     .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 150/@rem;
     .hd_top{
         display: flex;
         align-items:center;
         justify-content:space-between;
+        box-sizing: border-box;
         height: 80/@rem;
         background-color: @base-color;
         padding: 0 25/@rem;
+
     }
     .hd_logo{
         width: 490/@rem;
@@ -46,11 +52,13 @@
         background-size: 28/@rem 28/@rem;
     }
     .hd_nav{
+        position: relative;
+        background-color: #fff;
+        z-index: 9;
         .hd_nav_list{
             display: flex;
             padding: 0 25/@rem 0 50/@rem;
             justify-content:space-between;
-            border-bottom: 1px solid @base-color;
         }
         .hd_nav_item{
             height: 70/@rem;

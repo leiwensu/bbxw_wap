@@ -20,11 +20,14 @@
         text-align: center;
         background-color: #eee;
         color: #333;
+        margin-top: 1px;
+        border-top: 1px solid @base-color;
     }
     .hot_content{
         font-size: 0;
         box-shadow: border-box;
         padding:0 20/@rem;
+        padding-bottom: 40/@rem;
         a{
             box-sizing: border-box;
             display: inline-block;
@@ -32,7 +35,7 @@
             font-size: 14px;
             margin-top: 30/@rem;
             background: url('../assets/images/icon-hot.png') no-repeat;
-            background-size: 20/@rem 24/@rem;
+            background-size: 12px 14px;
             padding-left: 30/@rem;
         }
         .icon_hot{
