@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import setRem from './assets/js/common'
+import store from './store/store'
 
 Vue.config.productionTip = false
 require('./assets/css/base.less');
@@ -11,6 +12,7 @@ require('./assets/css/base.less');
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App },
   mounted () {

@@ -1,20 +1,47 @@
 <template>
+<div>
     <div class="header">
-            <div class="hd_top">
-                <a class="hd_logo" href="javascript:;"></a>
-                <a class="hd_search" href="javascript:;"></a>
-            </div>
-            <div class="hd_nav">
-                <ul class="hd_nav_list">
-                     <li class="hd_nav_item active"><a href="javascript:;">首页</a></li>
-                     <li class="hd_nav_item"><a href="javascript:;">最新</a></li>
-                     <li class="hd_nav_item"><a href="javascript:;">24小时</a></li>
-                     <li class="hd_nav_item"><a href="javascript:;">娱乐事件</a></li>
-                     <li class="hd_nav_item hd_nav_item--drop"><a href="javascript:;" class="icon_down"></a></li>
-                </ul>
+        <div class="hd_top">
+            <a class="hd_logo" href="javascript:;"></a>
+            <router-link class="hd_search" to="/search"></router-link>
+        </div>
+        <div class="hd_nav">
+            <ul class="hd_nav_list">
+                 <router-link class="hd_nav_item" active-class="active"  tag="li" to="/home">
+                    <a href="javascript:;">首页</a>
+                 </router-link>
+                 <router-link class="hd_nav_item" active-class="active"  tag="li" to="/event">
+                    <a href="javascript:;">最新</a>
+                 </router-link>
+                 <router-link class="hd_nav_item" active-class="active"  tag="li" to="/article">
+                    <a href="javascript:;">24小时</a>
+                 </router-link>
+                 <router-link class="hd_nav_item" active-class="active" tag="li" to="/map">
+                    <a href="javascript:;">娱乐事件</a>
+                </router-link>
 
+                 <li class="hd_nav_item hd_nav_item--drop" @click="toggleMenu">
+                    <a href="javascript:;" :class="isIconDown?'icon_down':'icon_up'"></a>
+                 </li>
+            </ul>
+        </div>
+    </div>
+    <transition name="fade">
+        <div class="hd_menu_wrap" v-show="showMenu">
+            <div class="hd_mask"></div>
+            <div class="hd_menu">
+                <a href="javascript:;">首页</a>
+                <a href="javascript:;">最新</a>
+                <a href="javascript:;">24小时</a>
+                <a href="javascript:;">娱乐事件</a>
+                <a href="javascript:;">国内外事件</a>
+                <a href="javascript:;">全部事件</a>
             </div>
         </div>
+    </transition>
+
+</div>
+
 </template>
 <style lang="less" scoped>
     @rem:100rem;
@@ -57,13 +84,13 @@
         z-index: 9;
         .hd_nav_list{
             display: flex;
-            padding: 0 25/@rem 0 50/@rem;
+            padding: 0 20/@rem 0 40/@rem;
             justify-content:space-between;
         }
         .hd_nav_item{
             height: 70/@rem;
             line-height: 70/@rem;
-            padding: 0 25/@rem;
+            padding: 0 20/@rem;
         }
         .active{
             border-bottom: 2px solid @base-color;
@@ -78,7 +105,77 @@
                 background: url("../assets/images/nav_arrow_down.png") no-repeat;
                 background-size: 30/@rem 16/@rem;
             }
+            .icon_up{
+                width: 30/@rem;
+                height: 16/@rem;
+                background: url("../assets/images/nav_arrow_up.png") no-repeat;
+                background-size: 30/@rem 16/@rem;
+            }
+        }
+    }
+
+}
+.hd_menu_wrap{
+    position: fixed;
+    left: 0;
+    top: 150/@rem;
+    width: 100%;
+    height: 100%;
+    .hd_mask{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+    .hd_menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 0 60/@rem;
+         opacity: 1;
+         z-index: 12;
+
+        a{
+            float: left;
+            margin-right: 60/@rem;
+            margin-top: 40/@rem;
+            opacity: 1;
+            color: #fff;
         }
     }
 }
+.fade-enter-active,.fade-leave {
+  transition: all .3s ease;
+}
+.fade-enter, .slide-fade-leave-active {
+  transform: translateX(10px);
+  opacity: 0;
+}
 </style>
+<script>
+    export default {
+        data () {
+            return {
+                showMenu:false,
+                isIconDown:true
+            }
+        },
+        methods:{
+            toggleMenu(){
+                if(this.showMenu === false){
+                    this.showMenu = true;
+                    this.isIconDown = false;
+                }else{
+                    this.showMenu = false;
+                    this.isIconDown = true;
+                }
+
+            }
+        }
+    }
+</script>

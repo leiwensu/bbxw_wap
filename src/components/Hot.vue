@@ -14,6 +14,9 @@
 <style lang="less" scoped>
     @rem:100rem;
     @base-color:#fa9144;
+    .hot_event{
+         margin-top: 150/@rem;
+    }
     .hot_title{
         height: 60/@rem;
         line-height: 60/@rem;

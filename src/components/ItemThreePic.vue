@@ -1,5 +1,5 @@
 <template>
-    <div class="item item_nopic">
+    <div class="item item_threepic">
         <h2 class="title"><a href="javascript:;"><i></i><p>炒房大杀器</p></a></h2>
         <div class="content">
             <h3><a href="javascript:;">一个大杀器来了</a></h3>
@@ -21,7 +21,7 @@
 <style lang="less" scoped>
     @rem:100rem;
     @base-color:#fa9144;
-    .content{
+    .item_threepic .content{
         padding-right: 10/@rem;
     }
     .three_pic_con{

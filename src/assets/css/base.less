@@ -19,10 +19,15 @@ a{
 ul{
     list-style: none;
 }
+.clearfix{
+    overflow: hidden;
+}
+.container .hide{
+    display: none;
+}
 .container{
     max-width: 768px;
     margin: 0 auto;
-    padding-top: 150/@rem;
 }
 .red_txt{
     color: #f00000;
@@ -67,17 +72,60 @@ ul{
     }
 }
 .time{
-        display: flex;
-        font-size: 12px;
-        padding-top: 14/@rem;
-        align-items:center;
-        i{
-            display: block;
-            width: 14px;
-            height: 14px;
-            background: url('../../assets/images/icon-time.png') no-repeat;
-            background-size: 14px;
-            margin-right: 10/@rem;
+    display: flex;
+    font-size: 12px;
+    padding-top: 14/@rem;
+    align-items:center;
+    i{
+        display: block;
+        width: 14px;
+        height: 14px;
+        background: url('../../assets/images/icon-time.png') no-repeat;
+        background-size: 14px;
+        margin-right: 10/@rem;
 
-        }
     }
+}
+.page{
+    padding: 40/@rem 120/@rem 100/@rem;
+    display: flex;
+    justify-content:space-between;
+    .arrow{
+        width: 80/@rem;
+        height: 48/@rem;
+        font-size: 32/@rem;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 48/@rem;
+    }
+    .current{
+        line-height: 48/@rem;
+    }
+    .active{
+        color: @base-color;
+        border: 1px solid @base-color;
+    }
+}
+.ev_title{
+    margin-top: 150/@rem;
+    height: 80/@rem;
+    line-height: 80/@rem;
+    text-align: center;
+    background-color: #eee;
+    color: #333;
+    border-bottom: 1px solid #bcbcbc;
+    margin-bottom: 30/@rem;
+    z-index: 8;
+}
+.no_content{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top: 104/@rem;
+    img{
+        width: 68/@rem;
+        height: 68/@rem;
+        margin-bottom: 30/@rem;
+    }
+}

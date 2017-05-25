@@ -1,5 +1,5 @@
 <template>
-    <div class="item item_nopic">
+    <div class="item item_onepic">
         <h2 class="title"><a href="javascript:;"><i></i><p>炒房大杀器</p></a></h2>
         <div class="content">
             <div class="one_pic_con">
@@ -20,7 +20,7 @@
 <style lang="less" scoped>
     @rem:100rem;
     @base-color:#fa9144;
-    .content{
+    .item_onepic .content{
         padding-bottom: 30/@rem;
         .con{
             flex:1;

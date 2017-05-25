@@ -2,7 +2,22 @@
     <div class="footer">
         <div class="ft_links">
             <div class="ft_links_title">友情链接</div>
-            <ul class="ft_list">
+            <ul :class="[showList?'':'auto_list','ft_list']">
+                <li class="ft_item">
+                    <a href="javascript:;">DR钻戒</a>
+                </li>
+                <li class="ft_item">
+                    <a href="javascript:;">手表网</a>
+                </li>
+                <li class="ft_item">
+                    <a href="javascript:;">缅甸翡翠</a>
+                </li>
+                <li class="ft_item">
+                    <a href="javascript:;">加盟创业</a>
+                </li>
+                <li class="ft_item">
+                    <a href="javascript:;">结婚礼物</a>
+                </li>
                 <li class="ft_item">
                     <a href="javascript:;">DR钻戒</a>
                 </li>
@@ -19,7 +34,7 @@
                     <a href="javascript:;">结婚礼物</a>
                 </li>
             </ul>
-            <div class="ft_more"><a href="javascript:;">点此展开</a></div>
+            <div class="ft_more" @click="showLinksList"><a href="javascript:;">点此展开</a></div>
         </div>
         <div class="ft_about">
             <div class="ft_about_list">
@@ -51,12 +66,16 @@
         }
         .ft_list{
             overflow: hidden;
-            padding-top: 20/@rem;
             .ft_item{
                 float: left;
                 border-right: 1px solid #b3b3b3;
                 padding: 0 20/@rem;
+                margin-top: 20/@rem;
+
             }
+        }
+        .auto_list{
+            height: 30px;
         }
         .ft_more{
             text-align: center;
@@ -78,5 +97,19 @@
         }
 
     }
-    
+
 </style>
+<script>
+    export default{
+        data () {
+            return {
+                showList:false
+            }
+        },
+        methods:{
+            showLinksList () {
+                this.showList = true;
+            }
+        }
+    }
+</script>

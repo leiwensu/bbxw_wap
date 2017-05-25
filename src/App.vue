@@ -1,21 +1,38 @@
 <template>
   <div id="app">
     <div class="container">
-        <headerNav></headerNav>
-        <homeVue></homeVue>
+        <headerNav v-show="headShow"></headerNav>
+        <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
 import headerNav from './components/Header.vue'
-import homeVue from './components/Home.vue'
+import {mapGetters} from 'vuex'
 export default {
-  name: 'app',
-  components:{
-    headerNav,
-    homeVue
-  }
+    name: 'app',
+    components:{
+        headerNav
+    },
+    computed:mapGetters([
+        'headShow'
+    ]),
+    watch:{
+        $route(to){
+          var path = to.path;
+          this.headerChange(path);
+        }
+    },
+    methods:{
+        headerChange(path){
+            if(path.indexOf('search')>0){
+                this.$store.dispatch('headHide');
+            }else{
+                this.$store.dispatch('headShow');
+            }
+        }
+    }
 }
 </script>
 
