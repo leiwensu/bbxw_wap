@@ -34,7 +34,7 @@
                     <a href="javascript:;">结婚礼物</a>
                 </li>
             </ul>
-            <div class="ft_more" @click="showLinksList"><a href="javascript:;">点此展开</a></div>
+            <div class="ft_more" @click="toggleLinksList"><a href="javascript:;">{{btnTxt}}</a></div>
         </div>
         <div class="ft_about">
             <div class="ft_about_list">
@@ -103,12 +103,18 @@
     export default{
         data () {
             return {
-                showList:false
+                showList:false,
+                btnTxt:"点此展开"
             }
         },
         methods:{
-            showLinksList () {
-                this.showList = true;
+            toggleLinksList () {
+                this.showList = !this.showList;
+                if (this.showList===true) {
+                    this.btnTxt = "点此收起";
+                }else{
+                    this.btnTxt = "点此展开";
+                }
             }
         }
     }

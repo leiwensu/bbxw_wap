@@ -6,9 +6,9 @@
         <ItemThreePicVue></ItemThreePicVue>
         <ItemThreePicVue></ItemThreePicVue>
         <div class="page">
-            <div class="arrow prev">&lt;</div>
+            <div class="arrow prev"></div>
             <div class="current">第1页</div>
-            <div class="arrow active next">&gt;</div>
+            <div class="arrow next active"></div>
         </div>
         <FooterVue></FooterVue>
     </div>

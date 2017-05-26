@@ -48,7 +48,13 @@
     .cate_list{
         padding-top: 40/@rem;
         padding-bottom: 40/@rem;
+        overflow: hidden;
+        text-align: center;
         a{
+            display: block;
+            box-sizing: border-box;
+            width: 33.3%;
+            float: left;
             padding-right: 30/@rem;
             line-height: 60/@rem;
             font-size: 16px;

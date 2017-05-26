@@ -93,18 +93,26 @@ ul{
     .arrow{
         width: 80/@rem;
         height: 48/@rem;
-        font-size: 32/@rem;
-        border: 1px solid #dcdcdc;
-        border-radius: 4px;
-        text-align: center;
-        line-height: 48/@rem;
+        background-repeat: no-repeat;
+        background-size: 80/@rem 48/@rem;
     }
     .current{
         line-height: 48/@rem;
     }
-    .active{
-        color: @base-color;
-        border: 1px solid @base-color;
+    .prev{
+         background-image: url('../images/page_left_invalid.png');
+         background-repeat: no-repeat;
+    }
+    .next{
+        background-image: url('../images/page_right_invalid.png');
+        background-repeat: no-repeat;
+    }
+
+    .prev.active{
+        background-image: url('../images/page_left_valid.png');
+    }
+    .next.active{
+        background-image: url('../images/page_right_valid.png');
     }
 }
 .ev_title{

@@ -16,7 +16,7 @@
                  <router-link class="hd_nav_item" active-class="active"  tag="li" to="/article">
                     <a href="javascript:;">24小时</a>
                  </router-link>
-                 <router-link class="hd_nav_item" active-class="active" tag="li" to="/map">
+                 <router-link class="hd_nav_item" active-class="active" tag="li" to="/details/123">
                     <a href="javascript:;">娱乐事件</a>
                 </router-link>
 
@@ -86,6 +86,7 @@
             display: flex;
             padding: 0 20/@rem 0 40/@rem;
             justify-content:space-between;
+            border-bottom: 1px solid @base-color;
         }
         .hd_nav_item{
             height: 70/@rem;

@@ -6,6 +6,7 @@ import Event from '@/components/Event'
 import Article from '@/components/Article'
 import MapVue from '@/components/MapVue'
 import TagVue from '@/components/Tag'
+import Details from '@/components/Details'
 Vue.use(Router)
 
 export default new Router({
@@ -39,6 +40,10 @@ export default new Router({
             path:'/tag/',
             name:'TagVue',
             component:TagVue
+        },{
+            path:'/details/:id',
+            name:'Details',
+            component:Details
         }
     ]
 })
