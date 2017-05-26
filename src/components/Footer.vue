@@ -38,11 +38,11 @@
         </div>
         <div class="ft_about">
             <div class="ft_about_list">
-               <a href="javascript:;" class="ft_about_item">最近更新</a>
+               <a href="javascript:;" class="ft_about_item">PC电脑版</a>
                <a href="javascript:;" class="ft_about_item">关于我们</a>
-               <a href="javascript:;" class="ft_about_item">广告服务</a>
-               <a href="javascript:;" class="ft_about_item">友情链接</a>
+               <a href="javascript:;" class="ft_about_item">最近更新</a>
                <a href="javascript:;" class="ft_about_item">网站地图</a>
+               <a href="javascript:;" class="ft_about_item">tag标签</a>
             </div>
             <p class="ft_copyright">Copyrights ©2011-2017 www.bbxw.com</p>
         </div>
