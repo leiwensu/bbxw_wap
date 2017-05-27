@@ -12,7 +12,6 @@
         <a href="javascript:;">公司资讯</a>
     </div>
     <CategoryVue></CategoryVue>
-    <FooterVue></FooterVue>
 </div>
 
 </template>
@@ -45,11 +44,9 @@
 </style>
 <script>
     import CategoryVue from './CategoryVue.vue'
-    import FooterVue from './Footer.vue'
     export default{
         components:{
-            CategoryVue,
-            FooterVue
+            CategoryVue
         }
     }
 </script>

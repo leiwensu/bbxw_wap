@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <div class="ft_links">
+        <div class="ft_links" v-show="isLinksShow">
             <div class="ft_links_title">友情链接</div>
             <ul :class="[showList?'':'auto_list','ft_list']">
                 <li class="ft_item">
@@ -41,8 +41,8 @@
                <a href="javascript:;" class="ft_about_item">PC电脑版</a>
                <a href="javascript:;" class="ft_about_item">关于我们</a>
                <a href="javascript:;" class="ft_about_item">最近更新</a>
-               <a href="javascript:;" class="ft_about_item">网站地图</a>
-               <a href="javascript:;" class="ft_about_item">tag标签</a>
+               <router-link class="ft_about_item" to="/map">网站地图</router-link>
+               <router-link class="ft_about_item" to="/tag">tag标签</router-link>
             </div>
             <p class="ft_copyright">Copyrights ©2011-2017 www.bbxw.com</p>
         </div>
@@ -107,6 +107,7 @@
                 btnTxt:"点此展开"
             }
         },
+        props:['isLinksShow'],
         methods:{
             toggleLinksList () {
                 this.showList = !this.showList;

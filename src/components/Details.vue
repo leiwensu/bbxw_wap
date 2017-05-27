@@ -57,7 +57,6 @@
             <li><a href="javascript:;">特朗普时代美国亚太战略的变与不变</a></li>
         </ul>
     </div>
-    <FooterVue></FooterVue>
 </div>
 
 </template>
@@ -175,11 +174,3 @@
         }
     }
 </style>
-<script>
-    import FooterVue from './Footer.vue'
-    export default{
-        components:{
-            FooterVue
-        }
-    }
-</script>

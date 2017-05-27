@@ -70,9 +70,9 @@
             </div>
         </div>
         <div class="page">
-            <div class="arrow prev">&lt;</div>
+            <div class="arrow prev"></div>
             <div class="current">第1页</div>
-            <div class="arrow active next">&gt;</div>
+            <div class="arrow active next"></div>
         </div>
     </div>
 </template>

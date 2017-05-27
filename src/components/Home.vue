@@ -5,7 +5,6 @@
         <ItemOnePicVue></ItemOnePicVue>
         <ItemThreePicVue></ItemThreePicVue>
         <div class="more_btn"><a href="javascript:;">点击加载更多</a></div>
-        <FooterVue></FooterVue>
     </div>
 </template>
 <style lang="less" scoped>
@@ -28,14 +27,25 @@ import hotVue from './Hot.vue'
 import ItemNoPicVue from './ItemNoPic.vue'
 import ItemOnePicVue from './ItemOnePic.vue'
 import ItemThreePicVue from './ItemThreePic.vue'
-import FooterVue from './Footer.vue'
     export default{
         components:{
             hotVue,
             ItemNoPicVue,
             ItemOnePicVue,
-            ItemThreePicVue,
-            FooterVue
+            ItemThreePicVue
+          },
+          mounted () {
+            var self = this;
+            window.onscroll = function () {
+                self.scroll();
+            }
+          },
+          methods:{
+            scroll () {
+                if(document.body.scrollTop+window.innerHeight==document.body.scrollHeight){
+                    console.log('bottom')
+                }
+            }
           }
     }
 </script>

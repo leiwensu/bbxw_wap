@@ -1,8 +1,8 @@
 <template>
     <div class="item item_threepic">
-        <h2 class="title"><a href="javascript:;"><i></i><p>炒房大杀器</p></a></h2>
+        <h2 class="title"><router-link to="/article"><i></i><p>炒房大杀器</p></router-link></h2>
         <div class="content">
-            <h3><a href="javascript:;">一个大杀器来了</a></h3>
+            <h3><router-link to="/details/1">一个大杀器来了</router-link></h3>
             <div class="three_pic_con">
                 <a href="javascript:;" class="pic">
                     <img src="../assets/images/210x140.png" height="140" width="210" alt="">

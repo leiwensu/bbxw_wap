@@ -53,8 +53,6 @@
         <div class="current">第1页</div>
         <div class="arrow active next"></div>
     </div>
-    <FooterVue></FooterVue>
-
 </div>
 
 </template>
@@ -108,11 +106,3 @@
         }
     }
 </style>
-<script>
-    import FooterVue from './Footer.vue'
-    export default{
-        components:{
-            FooterVue
-          }
-    }
-</script>

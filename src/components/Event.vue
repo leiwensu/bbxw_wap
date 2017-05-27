@@ -10,7 +10,6 @@
             <div class="current">第1页</div>
             <div class="arrow next active"></div>
         </div>
-        <FooterVue></FooterVue>
     </div>
 </template>
 
@@ -19,14 +18,12 @@
     import ItemNoPicVue from './ItemNoPic.vue'
     import ItemOnePicVue from './ItemOnePic.vue'
     import ItemThreePicVue from './ItemThreePic.vue'
-    import FooterVue from './Footer.vue'
     export default{
         components:{
             ItemNoPicVue,
             ItemOnePicVue,
             ItemThreePicVue,
-            ItemNoNewsVue,
-            FooterVue
+            ItemNoNewsVue
           }
     }
 </script>
